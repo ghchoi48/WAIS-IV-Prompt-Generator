@@ -28,6 +28,9 @@ class Ui_MainWindow(object):
         self.PromptButton = QPushButton(self.centralwidget)
         self.PromptButton.setObjectName(u"PromptButton")
         self.PromptButton.setGeometry(QRect(200, 360, 100, 32))
+        self.HistoryButton = QPushButton(self.centralwidget)
+        self.HistoryButton.setObjectName(u"HistoryButton")
+        self.HistoryButton.setGeometry(QRect(310, 360, 100, 32))
         self.Input_FSIQ = QLineEdit(self.centralwidget)
         self.Input_FSIQ.setObjectName(u"Input_FSIQ")
         self.Input_FSIQ.setGeometry(QRect(100, 90, 113, 21))
@@ -199,7 +202,8 @@ class Ui_MainWindow(object):
         QWidget.setTabOrder(self.Input_VP, self.Input_IN)
         QWidget.setTabOrder(self.Input_IN, self.Input_CD)
         QWidget.setTabOrder(self.Input_CD, self.PromptButton)
-        QWidget.setTabOrder(self.PromptButton, self.plainTextEdit)
+        QWidget.setTabOrder(self.PromptButton, self.HistoryButton)
+        QWidget.setTabOrder(self.HistoryButton, self.plainTextEdit)
         QWidget.setTabOrder(self.plainTextEdit, self.CopyButton)
 
         self.retranslateUi(MainWindow)
@@ -211,6 +215,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"K-WAIS-IV \ubd84\uc11d \ud504\ub86c\ud504\ud2b8 \uc0dd\uc131\uae30", None))
         self.PromptButton.setText(QCoreApplication.translate("MainWindow", u"\ud504\ub86c\ud504\ud2b8 \uc0dd\uc131", None))
+        self.HistoryButton.setText(QCoreApplication.translate("MainWindow", u"\uae30\ub85d \ubcf4\uae30", None)) # 기록 보기
         self.label.setText(QCoreApplication.translate("MainWindow", u"FSIQ", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"VCI", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"PRI", None))
